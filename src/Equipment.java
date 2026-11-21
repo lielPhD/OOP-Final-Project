@@ -19,6 +19,8 @@ public abstract class Equipment {
         return equipmentName;
     }
 
+    public abstract String getEquipmentType();
+
     public int getTotalQuantity() {
         return totalQuantity;
     }
