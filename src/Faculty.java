@@ -9,4 +9,14 @@ public class Faculty extends User{
     public String getDepartment() {
         return department;
     }
+
+    @Override
+    public String getUserType(){
+        return "Faculty";
+    }
+
+    @Override
+    public boolean canManageEquipment(){
+        return true;
+    }
 }

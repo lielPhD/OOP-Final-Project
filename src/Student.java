@@ -15,4 +15,14 @@ public class Student extends User{
     public String getYearLevel() {
         return yearLevel;
     }
+
+    @Override
+    public String getUserType(){
+        return "Student";
+    }
+
+    @Override
+    public boolean canManageEquipment(){
+        return false;
+    }
 }

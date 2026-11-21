@@ -23,6 +23,10 @@ public abstract class User {
         return userEmail;
     }
 
+    public abstract String getUserType();
+
+    public abstract boolean canManageEquipment();
+
     public boolean validatePassword(String password) {
         return userPassword.equals(password);
     }
