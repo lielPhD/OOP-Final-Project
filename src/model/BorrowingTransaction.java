@@ -11,7 +11,7 @@ public class BorrowingTransaction {
     private LocalDate borrowDate;
     private LocalDate dueDate;
     private LocalDate returnDate;
-    private String status;
+    private TransactionStatus status;
 
     public BorrowingTransaction(
             String transactionID,
