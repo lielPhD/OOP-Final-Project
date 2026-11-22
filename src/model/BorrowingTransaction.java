@@ -78,5 +78,10 @@ public class BorrowingTransaction {
         this.status = TransactionStatus.RETURNED;
     }
 
-
+    public TransactionStatus getStatus() {
+        if (status == TransactionStatus.BORROWED && LocalDate.now().isAfter(dueDate)) {
+            return TransactionStatus.OVERDUE;
+        }
+        return status;
+    }
 }
