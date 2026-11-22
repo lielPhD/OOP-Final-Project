@@ -64,8 +64,18 @@ public class BorrowingTransaction {
         return returnDate;
     }
 
-    public void setReturnDate(LocalDate returnDate) {
-        this.returnDate = returnDate;
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void markAsReturned() {
+        if (status == TransactionStatus.RETURNED) {
+            throw new IllegalStateException(
+                    "This equipment has already been returned."
+            );
+        }
+        this.returnDate = LocalDate.now();
+        this.status = TransactionStatus.RETURNED;
     }
 
 
