@@ -6,7 +6,20 @@ public abstract class Equipment {
     private int totalQuantity;
     private int availableQuantity;
 
-    Equipment(String equipmentID, String equipmentName, int totalQuantity, int availableQuantity) {
+    protected Equipment (
+            String equipmentID,
+            String equipmentName,
+            int totalQuantity,
+            int availableQuantity) {
+
+        //prevents entering higher available quantity than total quantity, and prevents negative quantities
+        if (totalQuantity < 0 || availableQuantity < 0 ||
+                availableQuantity > totalQuantity) {
+            throw new IllegalArgumentException(
+                    "Invalid equipment quantity."
+            );
+        }
+
         this.equipmentID = equipmentID;
         this.equipmentName = equipmentName;
         this.totalQuantity = totalQuantity;
