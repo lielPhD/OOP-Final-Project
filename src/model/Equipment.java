@@ -63,4 +63,31 @@ public abstract class Equipment {
 
         availableQuantity += quantity;
     }
+
+    public void updateDetails(String newName, int newTotalQuantity) {
+
+        if (newName == null || newName.isBlank()) {
+            throw new IllegalArgumentException(
+                    "Equipment name cannot be empty."
+            );
+        }
+
+        if (newTotalQuantity < 0) {
+            throw new IllegalArgumentException(
+                    "Quantity cannot be negative."
+            );
+        }
+
+        int borrowedQuantity = totalQuantity - availableQuantity;
+
+        if (newTotalQuantity < borrowedQuantity) {
+            throw new IllegalArgumentException(
+                    "New quantity cannot be less than the borrowed quantity."
+            );
+        }
+
+        this.equipmentName = newName.trim();
+        this.totalQuantity = newTotalQuantity;
+        this.availableQuantity = newTotalQuantity - borrowedQuantity;
+    }
 }
