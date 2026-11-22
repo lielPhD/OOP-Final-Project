@@ -13,7 +13,21 @@ public class BorrowingTransaction {
     private LocalDate returnDate;
     private String status;
 
+    public BorrowingTransaction(
+            String transactionID,
+            User borrower,
+            Equipment equipment,
+            int quantity,
+            LocalDate borrowDate,
+            LocalDate dueDate) {
 
+        this.transactionId = transactionID;
+        this.borrower = borrower;
+        this.equipment = equipment;
+        this.quantity = quantity;
+        this.borrowDate = borrowDate;
+        this.dueDate = dueDate;
+    }
     public LocalDate getReturnDate() {
         return returnDate;
     }
