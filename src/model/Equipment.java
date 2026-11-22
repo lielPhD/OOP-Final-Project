@@ -26,9 +26,7 @@ public abstract class Equipment {
         this.availableQuantity = availableQuantity;
     }
 
-    public String getEquipmentID() {
-        return equipmentID;
-    }
+    public String getEquipmentID() { return equipmentID; }
 
     public String getEquipmentName() {
         return equipmentName;
