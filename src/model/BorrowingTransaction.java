@@ -28,6 +28,19 @@ public class BorrowingTransaction {
         this.borrowDate = borrowDate;
         this.dueDate = dueDate;
     }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public User getBorrower() {
+        return borrower;
+    }
+
+    public Equipment getEquipment() {
+        return equipment;
+    }
+
     public LocalDate getReturnDate() {
         return returnDate;
     }
