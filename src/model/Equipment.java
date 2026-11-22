@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Equipment {
     private String equipmentID;
     private String equipmentName;

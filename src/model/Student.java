@@ -1,3 +1,5 @@
+package model;
+
 public class Student extends User{
     private String course;
     private String yearLevel;
@@ -18,7 +20,7 @@ public class Student extends User{
 
     @Override
     public String getUserType(){
-        return "Student";
+        return "model.Student";
     }
 
     @Override

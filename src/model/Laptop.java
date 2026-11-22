@@ -1,3 +1,5 @@
+package model;
+
 public class Laptop extends Equipment{
     private String operatingSystem;
     private String model;
@@ -18,6 +20,6 @@ public class Laptop extends Equipment{
 
     @Override
     public String getEquipmentType(){
-        return "Laptop";
+        return "model.Laptop";
     }
 }

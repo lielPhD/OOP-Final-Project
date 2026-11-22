@@ -1,3 +1,5 @@
+package model;
+
 public class Projector extends Equipment{
     private String brand;
     private String model;
@@ -18,7 +20,7 @@ public class Projector extends Equipment{
 
     @Override
     public String getEquipmentType(){
-        return "Projector";
+        return "model.Projector";
     }
 
 }
