@@ -43,4 +43,26 @@ public abstract class Equipment {
     public int getAvailableQuantity() {
         return availableQuantity;
     }
+
+    public void borrowEquipment(int quantity) {
+        if (quantity <= 0 || quantity > availableQuantity) {
+            throw new IllegalArgumentException(
+                    "Insufficient available equipment."
+            );
+        }
+
+        availableQuantity -= quantity;
+    }
+
+    public void returnEquipment(int quantity) {
+        if (quantity <= 0 ||
+                availableQuantity + quantity > totalQuantity) {
+
+            throw new IllegalArgumentException(
+                    "Invalid return quantity."
+            );
+        }
+
+        availableQuantity += quantity;
+    }
 }

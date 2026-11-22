@@ -3,7 +3,13 @@ package model;
 public class Faculty extends User{
     private String department;
 
-    public Faculty(String userID, String userName, String userEmail, String userPassword, String department) {
+    public Faculty(
+            String userID,
+            String userName,
+            String userEmail,
+            String userPassword,
+            String department) {
+
         super(userID, userName, userEmail, userPassword);
         this.department = department;
     }
@@ -14,7 +20,7 @@ public class Faculty extends User{
 
     @Override
     public String getUserType(){
-        return "model.Faculty";
+        return "Faculty";
     }
 
     @Override

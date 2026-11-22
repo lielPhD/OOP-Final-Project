@@ -4,7 +4,14 @@ public class Projector extends Equipment{
     private String brand;
     private String model;
 
-    Projector(String equipmentID, String equipmentName, int totalQuantity, int availableQuantity, String brand, String model){
+    public Projector(
+            String equipmentID,
+            String equipmentName,
+            int totalQuantity,
+            int availableQuantity,
+            String brand,
+            String model){
+
         super(equipmentID, equipmentName, totalQuantity, availableQuantity);
         this.brand = brand;
         this.model = model;
@@ -20,7 +27,7 @@ public class Projector extends Equipment{
 
     @Override
     public String getEquipmentType(){
-        return "model.Projector";
+        return "Projector";
     }
 
 }

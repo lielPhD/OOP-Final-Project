@@ -4,7 +4,14 @@ public class Laptop extends Equipment{
     private String operatingSystem;
     private String model;
 
-    Laptop(String equipmentID, String equipmentName, int totalQuantity, int availableQuantity, String operatingSystem, String model){
+    public Laptop(
+            String equipmentID,
+            String equipmentName,
+            int totalQuantity,
+            int availableQuantity,
+            String operatingSystem,
+            String model){
+
         super(equipmentID, equipmentName, totalQuantity, availableQuantity);
         this.operatingSystem = operatingSystem;
         this.model = model;
@@ -20,6 +27,6 @@ public class Laptop extends Equipment{
 
     @Override
     public String getEquipmentType(){
-        return "model.Laptop";
+        return "Laptop";
     }
 }

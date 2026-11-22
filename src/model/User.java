@@ -6,11 +6,16 @@ public abstract class User {
     private String userEmail;
     private String userPassword;
 
-    User(String borrowerID, String borrowerName, String borrowerEmail, String borrowerPassword) {
-        this.userID = borrowerID;
-        this.userName = borrowerName;
-        this.userEmail = borrowerEmail;
-        this.userPassword = borrowerPassword;
+    protected User(
+            String userID,
+            String userName,
+            String userEmail,
+            String userPassword) {
+
+        this.userID = userID;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
     }
 
     public String getUserID() {

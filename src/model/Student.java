@@ -4,7 +4,14 @@ public class Student extends User{
     private String course;
     private String yearLevel;
 
-    public Student(String userID, String userName, String userEmail, String userPassword, String course, String yearLevel) {
+    public Student(
+            String userID,
+            String userName,
+            String userEmail,
+            String userPassword,
+            String course,
+            String yearLevel) {
+
         super(userID, userName, userEmail, userPassword);
         this.course = course;
         this.yearLevel = yearLevel;
@@ -20,7 +27,7 @@ public class Student extends User{
 
     @Override
     public String getUserType(){
-        return "model.Student";
+        return "Student";
     }
 
     @Override
