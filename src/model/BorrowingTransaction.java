@@ -38,6 +38,8 @@ public class BorrowingTransaction {
         this.quantity = quantity;
         this.borrowDate = borrowDate;
         this.dueDate = dueDate;
+        this.returnDate = null;
+        this.status = TransactionStatus.BORROWED;
     }
 
     public LocalDate getBorrowDate() {
