@@ -21,6 +21,17 @@ public class BorrowingTransaction {
             LocalDate borrowDate,
             LocalDate dueDate) {
 
+        if(transactionID == null ||
+                transactionID.isBlank() ||
+                borrower == null ||
+                equipment == null ||
+                quantity <= 0 ||
+                borrowDate == null ||
+                dueDate == null ||
+                dueDate.isBefore(borrowDate)) {
+            throw new IllegalArgumentException("Invalid input");
+        }
+
         this.transactionId = transactionID;
         this.borrower = borrower;
         this.equipment = equipment;
