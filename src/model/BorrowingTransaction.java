@@ -40,6 +40,14 @@ public class BorrowingTransaction {
         this.dueDate = dueDate;
     }
 
+    public LocalDate getBorrowDate() {
+        return borrowDate;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
     public String getTransactionId() {
         return transactionId;
     }
