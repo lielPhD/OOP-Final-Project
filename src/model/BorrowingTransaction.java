@@ -13,13 +13,7 @@ public class BorrowingTransaction {
     private LocalDate returnDate;
     private TransactionStatus status;
 
-    public BorrowingTransaction(
-            String transactionID,
-            User borrower,
-            Equipment equipment,
-            int quantity,
-            LocalDate borrowDate,
-            LocalDate dueDate) {
+    public BorrowingTransaction(String transactionID, User borrower, Equipment equipment, int quantity, LocalDate borrowDate, LocalDate dueDate) {
 
         if(transactionID == null ||
                 transactionID.isBlank() ||

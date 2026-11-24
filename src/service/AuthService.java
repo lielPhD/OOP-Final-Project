@@ -57,6 +57,7 @@ public class AuthService {
                 return user;
             }
         }
+        logout();
         return null;
     }
 

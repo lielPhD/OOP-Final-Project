@@ -70,6 +70,7 @@ public class BorrowingService {
     public ArrayList<BorrowingTransaction> getBorrowingHistory() {
         return new ArrayList<>(transactions);
     }
+
     public BorrowingTransaction borrowEquipment(
             User borrower,
             String equipmentID,
